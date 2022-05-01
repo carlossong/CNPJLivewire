@@ -8,16 +8,16 @@ use Livewire\Component;
 class Cnpj extends Component
 {
     public $cnpj;
-    public $nome;
-    public $telefone;
+    public $name;
+    public $phone;
     public $email;
-    public $cep;
-    public $logradouro;
-    public $numero;
-    public $complemento;
-    public $bairro;
-    public $municipio;
-    public $uf;
+    public $zipcode;
+    public $street;
+    public $number;
+    public $complement;
+    public $neighborhood;
+    public $city;
+    public $state;
 
     public function getCnpj($cnpj)
     {
@@ -29,16 +29,16 @@ class Cnpj extends Component
             session()->flash('message', 'CNPJ inválido.');
             return redirect()->route('dashboard');
         }else{
-            $this->nome = $data['nome'];
-            $this->telefone = $data['telefone'];
+            $this->name = $data['nome'];
+            $this->phone = $data['telefone'];
             $this->email = $data['email'];
-            $this->cep = $data['cep'];
-            $this->logradouro = $data['logradouro'];
-            $this->numero = $data['numero'];
-            $this->complemento = $data['complemento'];
-            $this->bairro = $data['bairro'];
-            $this->municipio = $data['municipio'];
-            $this->uf = $data['uf'];
+            $this->zipcode = $data['cep'];
+            $this->street = $data['logradouro'];
+            $this->number = $data['numero'];
+            $this->complement = $data['complemento'];
+            $this->neighborhood = $data['bairro'];
+            $this->city = $data['municipio'];
+            $this->state = $data['uf'];
 
         }
     }
